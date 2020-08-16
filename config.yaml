@@ -1,0 +1,7 @@
+pretrained_weight: bert-base-multilingual-cased
+train_batch_size: 12
+eval_batch_size: 24
+epochs: 30
+patient: 3
+lr: 0.000001
+name: f0/

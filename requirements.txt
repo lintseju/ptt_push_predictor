@@ -1,0 +1,10 @@
+arrow
+beautifulsoup4
+numpy
+pyyaml
+requests
+scikit-learn
+tqdm
+torch
+transformers
+ujson
