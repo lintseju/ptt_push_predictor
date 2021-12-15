@@ -218,6 +218,10 @@ def main():
             logging.info('Epoch %d not improving from best_epoch %d beark!', epoch, best_epoch)
             break
 
+    # 讀入 validation loss 最好的模型
+    checkpoint = torch.load(checkpoint_dir + 'best.bin')
+    model.load_state_dict(checkpoint['model_state'])
+
     # evaluate on test
     test_loader = DataLoader(
         TextDataset(arrow.get('20200501', 'YYYYMMDD'), arrow.get('20200701', 'YYYYMMDD'), tokenizer),
